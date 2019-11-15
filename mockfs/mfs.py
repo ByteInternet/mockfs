@@ -216,7 +216,7 @@ class MockFS(object):
                 dirstack.extend([os.path.join(entry, d) for d in dirs])
             inspect = dirstack
             if not inspect:
-                raise StopIteration
+                break
 
     def remove(self, path):
         """Remove the entry for a file path
